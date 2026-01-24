@@ -1,0 +1,649 @@
+/* CSS VARIABLES */
+:root {
+    --primary-color: #ba2d06;
+    --dark-color: #0f172a;
+    --light-color: #ffffff;
+    --text-color: #334155;
+    --border-color: #e2e8f0;
+    --hover-color: #0b5ed7;
+    --transition: all 0.3s ease;
+    --font-main: 'Inter', sans-serif;
+}
+
+
+/* Universal Resetter (Margin,Padding, Box-Model) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html formatting (default font-size, font-color  ) */
+html {
+    font-size: 62.5%;
+    color: #fff;
+}
+
+body {
+    background-color: #2e261f;
+    font-family: 'inter', sans-serif;
+    padding: 1.2rem;
+}
+
+
+/* *Common Styles Start */
+
+/* For Container */
+.container {
+    width: 95%;
+    max-width: 136rem;
+    margin: 0 auto;
+    padding: 0.8rem;
+
+    background-color: rgb(66, 66, 66);
+}
+
+/* For All Anchor Tags */
+header a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.section-heading {
+    font-size: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.floating-title {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fa5b2f;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.middle-section {
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--light-color);
+
+}
+
+/* Common Styles End */
+
+
+/* HEADER NOTICE BAR Start */
+header .noticeBar {
+    /* color */
+    background-color: #1f1f21;
+
+    /* font */
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    /* Box-Model */
+    padding: 1rem;
+    border-radius: 0.8rem;
+    margin-bottom: 1.2rem;
+
+    /* CSS Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .noticeBar .contacts,
+header .noticeBar .social-box,
+header .noticeBar .social-box .social-items {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+header .noticeBar .contacts a,
+header .noticeBar .social-box a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+header .noticeBar .social-box a:hover,
+header .noticeBar .social-box a:focus-visible {
+    color: var(--hover-color);
+}
+
+/* Header Notice Bar End */
+
+
+
+/* HEADER NAVBAR Start */
+header .navbar {
+    /* color */
+    background-color: #1f1f21;
+
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    /* Box-Model */
+    padding: 0.6rem 1.6rem;
+    border-radius: 0.8rem;
+
+    /* CSS Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar .navbar-main {
+    /* CSS Layout */
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-area img {
+    width: 4rem;
+}
+
+header .navbar .navmenu ul {
+    list-style-type: none;
+    font-size: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.navmenu a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--light-color);
+    position: relative;
+    padding: 4px 0;
+    transition: var(--transition);
+}
+
+.navmenu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: var(--transition);
+}
+
+.navmenu a:hover::after,
+.navmenu a:focus-visible::after {
+    width: 100%;
+}
+
+.navmenu a:hover,
+.navmenu a:focus-visible {
+    color: var(--hover-color);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-color);
+    background-color: var(--primary-color);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--hover-color);
+    transform: translateY(-1px);
+}
+
+/* Header Navbar End */
+
+
+/* Hero Section Start */
+#hero-section .container {
+    /* bg-img */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* text */
+    text-align: center;
+
+    /* box-model */
+    width: 88%;
+    max-width: 132rem;
+    height: 70vh;
+
+    /* animation */
+    animation: heroSlider 12s infinite ease-in-out;
+
+    /* position */
+    position: relative;
+}
+
+/* keyframes MUST be outside */
+@keyframes heroSlider {
+    0% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/MosqueSmall.jpg");
+    }
+
+    20% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/1.jpeg");
+    }
+
+    40% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/2.jpg");
+    }
+
+    60% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/3.jpeg");
+    }
+
+    80% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/4.jpeg");
+    }
+
+    100% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, 0. 8), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/5.jpeg");
+    }
+}
+
+
+/* Heading */
+#hero-section .hero-text {
+    padding: 2rem;
+    position: relative;
+}
+
+#hero-section .hero-text h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+#hero-section .hero-text p {
+    font-size: 2.2rem;
+}
+
+/* Slider Controls Button */
+#hero-section .slider-controls {
+    /* box-model */
+    width: 100%;
+    max-width: 136rem;
+    padding: 0.8rem;
+
+    /* CSS Layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* position */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero-section .slider-btn-prev {
+    /* position */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+#hero-section .slider-btn-next {
+    /* position */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+#hero-section .slider-btn-prev,
+#hero-section .slider-btn-next {
+    /* color */
+    background-color: transparent;
+    color: var(--hover-color);
+
+    /* box-model */
+    padding: 0.4rem;
+    border: 0.1rem solid var(--hover-color);
+    border-radius: 100rem;
+
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    /* CSS Layout */
+    cursor: pointer;
+
+    /* animation */
+    transition: var(--transition);
+}
+
+#hero-section .slider-btn-prev:hover,
+#hero-section .slider-btn-next:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    /* transform: translateY(-1px); */
+}
+
+/* Hero Section End */
+
+
+/* About Section Start */
+#about .container {
+    /* box-model */
+    padding-top: 9rem;
+
+    /* CSS Layout */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6.4rem;
+}
+
+#about .section-heading {
+    text-align: left;
+}
+
+#about .section-img {
+    width: 58rem;
+}
+
+
+#about .section-text {
+    width: 60rem;
+}
+
+#about .floating-title {
+    /* font */
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fa5b2f;
+    letter-spacing: 0.2rem;
+}
+
+#about .section-heading {
+    font-size: 3.2rem;
+    margin-bottom: 1.6rem;
+}
+
+#about .section-para {
+    font-size: 1.6rem;
+    color: #537682;
+    margin-bottom: 1.2rem;
+}
+
+#about button {
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    /* box-model */
+    padding: 1.2rem 2.4rem;
+
+    /* color */
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ba2d06;
+}
+
+#about button:hover {
+    background-color: #0b5ed7;
+    color: #0f172a;
+    border: none;
+}
+
+/* About Section End */
+
+/* SERVICES SECTION Start */
+#services .container {
+    padding-top: 5rem;
+}
+
+#services .service-box {
+    /* CSS Layout */
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+#services .service-item {
+    /* color */
+    background-color: #292c2e;
+
+    /* box-model */
+    padding: 3.5rem;
+    width: 40rem;
+    border-radius: 0.8rem;
+
+    /* CSS Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.4rem;
+
+    min-width: 45%;
+}
+
+#services .service-item-header {
+    /* CSS Layout */
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    align-items: center;
+}
+
+#services .service-item-header .service-icon {
+    /* color */
+    background-color: #181818;
+    color: #fff;
+
+    /* box-model */
+    width: 6rem;
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+}
+
+#services .service-item-header .service-icon img {
+    /* color */
+    color: #fff;
+
+    /* box-model */
+    width: 100%;
+
+}
+
+#services .service-item-header .service-item-heading {
+    /* font */
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #ccc8c2;
+}
+
+
+#services .service-item-content {
+    /* color */
+    background-color: #181818;
+
+    /* box-model */
+    padding: 2.4rem;
+    border-radius: 0.8rem;
+}
+
+#services .service-item-content h4 {
+    /* font */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+#services .service-item-content p {
+    /* color */
+    color: #d4f3fd;
+
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: capitalize;
+
+    /* box-model */
+    padding: 1.2rem 0 2rem;
+    border-radius: 0.8rem;
+}
+
+.service-item-content button {
+    /* color */
+    background-color: transparent;
+
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+
+    /* box-model */
+    padding: 1.2rem 0;
+    border: none;
+}
+
+.service-item-content a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.service-item-content a:hover,
+.service-item-content a:focus-visible {
+    color: var(--hover-color);
+    transition: var(--transition);
+}
+
+#services .slider-controls {
+    /* box-model */
+    width: 100%;
+    max-width: 136rem;
+    padding: 0.8rem;
+
+    /* CSS Layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* position */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#services .slider-btn-prev {
+    /* position */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#services .slider-btn-next {
+    /* position */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#services .slider-btn-prev,
+#services .slider-btn-next {
+    /* color */
+    background-color: transparent;
+    color: var(--hover-color);
+
+    /* box-model */
+    padding: 0.4rem;
+    border: 0.1rem solid var(--hover-color);
+    border-radius: 100rem;
+
+    /* font */
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    /* CSS Layout */
+    cursor: pointer;
+
+    /* animation */
+    transition: var(--transition);
+}
+
+#services .slider-btn-prev:hover,
+#services .slider-btn-next:hover {
+    background-color: var(--hover-color);
+    color: #fff;
+    /* transform: translateY(-1px); */
+}
+
+.service-box {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.service-carousal-box {
+    overflow: hidden;
+}
+
+.service-carousal-viewport {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    transition: transform 0.5s ease;
+}
+
+
+
+
+
+
+
+
+
+/* .fa-brands {
+    width: 2.4rem;
+    height: 2.4rem;
+} */

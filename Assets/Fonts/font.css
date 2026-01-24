@@ -1,0 +1,6 @@
+@import url(./web/inter.css);
+
+body{
+    font-family: "InterVariable", sans-serif; 
+    font-optical-sizing: auto;
+}
