@@ -185,6 +185,8 @@ header .navbar .container {
 }
 
 .hamburger {
+    background-color: transparent;
+    border: none;
     display: none;
     flex-direction: column;
     cursor: pointer;
@@ -199,62 +201,6 @@ header .navbar .container {
     transition: 0.3s;
 }
 
-/* Responsive */
-@media (max-width: 76.8rem) {
-    .notice-bar {
-        font-size: 1.4rem;
-    }
-
-    .notice-bar .container {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .navmenu {
-        position: fixed;
-        top: 140px;
-        /* Notice bar + navbar height */
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 140px);
-        background: white;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: left 0.3s ease;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .navmenu.active {
-        left: 0;
-    }
-
-    .navmenu ul {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .navbar-btn {
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        height: 60px;
-    }
-
-    .logo img {
-        height: 40px;
-    }
-}
 
 
 header .navbar .navbar-main {
@@ -312,9 +258,9 @@ header .navbar .navmenu ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
-    padding: 0 24px;
-    font-size: 14px;
+    height: 4.4rem;
+    padding: 0 2.4rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--light-color);
     background-color: var(--primary-color);
@@ -328,6 +274,67 @@ header .navbar .navmenu ul {
 .btn:focus-visible {
     background-color: var(--hover-color);
     transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 76.8rem) {
+    .notice-bar {
+        font-size: 1.4rem;
+    }
+
+    .notice-bar .container {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navmenu {
+        position: fixed;
+        top: 140px;
+        /* Notice bar + navbar height */
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 140px);
+        background: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .navmenu.active {
+        left: 0;
+    }
+
+    .navmenu ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .navbar-btn {
+        height: 4rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .notice-bar .container {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        height: 7.5rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
 }
 
 /* Header Navbar End */
@@ -349,7 +356,7 @@ header .navbar .navmenu ul {
     /* box-model */
     width: 100%;
     margin: 0 auto;
-    height: 80vh;
+    height: 85vh;
 
     /* animation */
     animation: heroSlider 12s infinite ease-in-out;
@@ -362,38 +369,38 @@ header .navbar .navmenu ul {
 @keyframes heroSlider {
     0% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
             url("../Images/Hero-Section/MosqueSmall.jpg");
     }
 
     20% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-            url("../Images/Hero-Section/1.jpeg");
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/01.jpeg");
     }
 
     40% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-            url("../Images/Hero-Section/2.jpg");
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/02.jpeg");
     }
 
     60% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-            url("../Images/Hero-Section/3.jpeg");
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/03.jpeg");
     }
 
     80% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-            url("../Images/Hero-Section/4.jpeg");
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/04.jpeg");
     }
 
     100% {
         background-image:
-            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
-            url("../Images/Hero-Section/5.jpeg");
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+            url("../Images/Hero-Section/MosqueSmall.jpg");
     }
 }
 
@@ -459,13 +466,7 @@ header .navbar .navmenu ul {
     color: var(--hover-color);
 
     /* box-model */
-    padding: 0.6rem;
-    /* border: 0.1rem solid var(--hover-color); */
     border-radius: 100rem;
-
-    /* font */
-    font-size: 1.6rem;
-    font-weight: 600;
 
     /* CSS Layout */
     cursor: pointer;
@@ -479,6 +480,30 @@ header .navbar .navmenu ul {
     background-color: var(--hover-color);
     color: #fff;
     /* transform: translateY(-1px); */
+}
+
+@media (max-width: 76.8rem) {
+    #hero-section {
+        height: 80vh;
+    }
+
+    #hero-section .hero-section-heading h1 {
+        font-size: 3.2rem;
+    }
+
+    #hero-section .slider-btn-prev,
+    #hero-section .slider-btn-next {
+        width: 3rem;
+        height: 3rem;
+
+    }
+
+}
+
+@media (max-width: 48rem) {
+    #hero-section {
+        height: 70vh;
+    }
 }
 
 /* Hero Section Slider Controls Button End */

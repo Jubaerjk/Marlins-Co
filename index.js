@@ -17,8 +17,8 @@ hamburger.addEventListener('keydown', (e) => {
 
 // Close menu on resize if open
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768px) {
-    navmenu.classList.remove('active');
-    hamburger.setAttribute('aria-expanded', 'false');
-}
+    if (window.innerWidth > 768) {
+        navmenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
 });
