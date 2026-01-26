@@ -126,7 +126,6 @@
 
     #about .container .section-heading {
         max-width: 100%;
-        font-size: 2.4rem;
     }
 
     #about .section-heading .section-title {
@@ -141,6 +140,18 @@
 
 
 @media (max-width: 76.8rem) {
+    #projects .container .projects-content {
+        max-width: 100%;
+        gap: 1.6rem;
+    }
+
+    #projects .container .projects-content .project-item {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 48rem) {
     #projects .container .projects-content {
         max-width: 100%;
         gap: 1.6rem;
