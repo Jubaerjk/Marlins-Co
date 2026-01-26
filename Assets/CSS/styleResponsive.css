@@ -296,29 +296,90 @@ header .navbar .navmenu ul {
 
 /* Hero Section Start */
 
-/* Hero Section Bg & Keyframes Animation Start */
 #hero-section {
-    /* bg-img */
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
-    /* text */
+    background-image:
+        linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+        url("../Images/Hero-Section/MosqueSmall.jpg");
+
+    animation: heroFade 24s infinite;
+    z-index: -1;
+}
+
+@keyframes heroFade {
+
+    0%,
+    10% {
+        opacity: 1;
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+            url("../Images/Hero-Section/MosqueSmall.jpg");
+    }
+
+    20%,
+    30% {
+        opacity: 1;
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+            url("../Images/Hero-Section/01.jpeg");
+    }
+
+    40%,
+    50% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+            url("../Images/Hero-Section/02.jpeg");
+    }
+
+    60%,
+    70% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+            url("../Images/Hero-Section/03.jpeg");
+    }
+
+    80%,
+    100% {
+        background-image:
+            linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .4)),
+            url("../Images/Hero-Section/MosqueSmall.jpg");
+    }
+}
+
+
+
+/* Hero Section Bg & Keyframes Animation Start */
+/* #hero-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     text-align: center;
 
-    /* box-model */
     width: 100%;
     margin: 0 auto;
     height: 85vh;
 
-    /* animation */
-    animation: heroSlider 12s infinite ease-in-out;
+    animation: heroSlider 36s infinite ease-in;
 
-    /* position */
     position: relative;
 }
 
-/* keyframes MUST be outside */
+
 @keyframes heroSlider {
     0% {
         background-image:
@@ -385,7 +446,7 @@ header .navbar .navmenu ul {
             linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
             url("../Images/Hero-Section/MosqueSmall.jpg");
     }
-}
+} */
 
 /* Hero Section Bg & Keyframes Animation End */
 
@@ -899,7 +960,7 @@ header .navbar .navmenu ul {
 }
 
 #team .team-item .team-item-text .member-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.9);
 }
@@ -914,7 +975,7 @@ header .navbar .navmenu ul {
 #team .team-item .team-item-text .member-description {
     font-size: 1.4rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 1.2rem;
 }
 
