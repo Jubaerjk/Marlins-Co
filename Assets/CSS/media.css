@@ -24,10 +24,6 @@ Large Desktop Devices (1200px+)
 /* ===================================================================== */
 
 @media (max-width: 768px) {
-  #hero-section {
-    height: 95vh;
-  }
-
   .btn-mobile-nav {
     display: block;
   }
