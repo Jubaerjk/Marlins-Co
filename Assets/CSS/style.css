@@ -511,15 +511,13 @@ ul li {
     background-color: #393E46;
 }
 
-.services-list {
+.service-cards-box {
     /* CSS Layout */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2.5rem;
-
-    /* box-model */
-    padding: 0;
-    margin: 0;
 }
 
 /* Content */
@@ -532,8 +530,9 @@ ul li {
     background: #222831;
 
     /* box-model */
+    width: 40rem;
     border-radius: 0.8rem;
-    padding: 2.5rem;
+    padding: 1.2rem;
 
     /* CSS Layout */
     display: flex;
@@ -553,8 +552,8 @@ ul li {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -570,16 +569,10 @@ ul li {
 }
 
 .service-header-title {
-    font-size: clamp(2rem, 1.2vw, 3.2rem);
+    font-size: 2.4rem;
     font-weight: 700;
-    color: #009da5;
+    color: #dbdbdb;
     text-transform: uppercase;
-}
-
-.service-header-subtitle {
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
-    font-weight: 400;
-    color: #EEEEEE;
 }
 
 /* ===============================
@@ -587,7 +580,7 @@ ul li {
 ================================ */
 .fa-circle-check {
     color: #00C853;
-    margin-right: 0.8rem;
+    margin-right: 0.6rem;
 }
 
 .service-content {
@@ -615,13 +608,13 @@ ul li {
    Service Link
 ================================ */
 .service-link {
-    background-color: #c9c9c9;
+    background-color: #e0e0e0;
     display: block;
     font-size: 1.6rem;
     font-weight: 700;
     color: #000;
-    padding: 0.8rem 0;
-    border-radius: 0.4rem;
+    padding: 0.6rem 0;
+    border-radius: 0.6rem;
     text-decoration: none;
     text-align: center;
 }
