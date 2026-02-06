@@ -389,7 +389,7 @@ ul li {
 
 .article-read-more {
     display: block;
-    background-color: #808080;
+    background-color: #4b4b4b;
     font-size: clamp(1.2rem, 1.2vw, 1.4rem);
     font-weight: 600;
     padding: 0.8rem 3.6rem;
@@ -502,120 +502,8 @@ ul li {
 /* Content */
 
 /* ===============================
-   Service Card
+   Service Card with Animation
 ================================ */
-.service-card {
-    /* color */
-    background: #222831;
-
-    /* box-model */
-    width: 40rem;
-    border-radius: 0.8rem;
-    padding: 1.2rem;
-
-    /* CSS Layout */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* ===============================
-   Card Header
-================================ */
-.service-card-header {
-    display: flex;
-    gap: 8rem;
-    align-items: center;
-    z-index: 10;
-}
-
-.service-icon {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #181818;
-    border-radius: 0.8rem;
-    overflow: hidden;
-}
-
-.service-icon img {
-    width: 5rem;
-    height: 5rem;
-    object-fit: contain;
-}
-
-.service-number {
-    font-size: 3.6rem;
-    font-weight: 800;
-    letter-spacing: 0.2rem;
-    color: #ffffff;
-    z-index: 10;
-}
-
-.service-header-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #dbdbdb;
-    text-transform: uppercase;
-}
-
-/* ===============================
-   Card Content
-================================ */
-.fa-circle-check {
-    color: #00C853;
-    margin-right: 0.6rem;
-}
-
-.service-content {
-    width: 36rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-    background-color: #181818;
-    padding: 2rem;
-    border-radius: 0.8rem;
-    z-index: 10;
-}
-
-.service-content-title {
-    font-size: 1.6rem;
-    color: #ffffff;
-}
-
-.service-description-list li {
-    font-size: 1.4rem;
-    line-height: 1.8;
-    color: #EEEEEE;
-    opacity: 0.9;
-}
-
-/* ===============================
-   Service Link
-================================ */
-.service-link {
-    background-color: #e0e0e0;
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #000;
-    padding: 1rem 1.8rem;
-    border-radius: 0.6rem;
-    text-decoration: none;
-    text-align: center;
-}
-
-.service-link:hover {
-    background-color: #0b5ed7;
-    color: #fff;
-}
-
-
-
-
-
 
 .service-card {
     /* color */
@@ -667,6 +555,127 @@ ul li {
         transform: rotate(360deg);
     }
 }
+
+
+/* ===============================
+   Card Header
+================================ */
+.service-card .service-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #181818;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.service-icon img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+}
+
+.service-number {
+    font-size: 3.6rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    color: #ffffff;
+    z-index: 10;
+}
+
+.service-header-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #dbdbdb;
+    text-transform: uppercase;
+
+    background: linear-gradient(120deg,
+            #1e3c72,
+            #3961a7,
+            #1e3c72);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 8s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ===============================
+   Card Content
+================================ */
+.fa-circle-check {
+    color: #00C853;
+    margin-right: 0.6rem;
+}
+
+.service-card-content {
+    width: 36rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    background-color: #181818;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    z-index: 10;
+}
+
+.service-content-title {
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.service-description-list li {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #EEEEEE;
+    opacity: 0.9;
+}
+
+/* ===============================
+   Service Link
+================================ */
+.service-link {
+    background-color: #e0e0e0;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #000;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.service-link:hover {
+    background-color: #0b5ed7;
+    color: #fff;
+}
+
+
+
 
 
 
