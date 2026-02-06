@@ -103,40 +103,7 @@ Large Desktop Devices (1200px+)
 /* ===================================================================== */
 /* Article Section Media */
 /* ===================================================================== */
-@media (max-width: 992px) {
-  #articles .container {
-    flex-wrap: wrap;
-  }
-}
 
-@media (max-width: 768px) {
-  #articles .container {
-    flex-wrap: wrap;
-  }
-
-  .article-box {
-    width: 480px;
-  }
-
-  .article-read-more {
-    padding: 0.8rem 2.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #articles {
-    padding: 4rem 0;
-  }
-
-  #articles .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .article-box {
-    width: 80%;
-  }
-}
 
 
 /* ===================================================================== */
