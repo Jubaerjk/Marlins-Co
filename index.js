@@ -31,3 +31,63 @@ document.querySelector(".slider-btn-next").addEventListener("click", () => {
 });
 
 
+
+
+
+
+
+
+// ================================
+// ARTICLE SLIDER
+// ================================
+
+const viewport = document.querySelector('.article-content');
+const track = document.querySelector('.article-track');
+const cards = document.querySelectorAll('.article-box');
+const prevBtn = document.querySelector('.article-slider-btn-prev');
+const nextBtn = document.querySelector('.article-slider-btn-next');
+
+let index = 0;
+const gap = 32;
+const cardWidth = cards[0].offsetWidth + gap;
+
+function updateSlider() {
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+
+nextBtn.addEventListener('click', () => {
+    if (index < cards.length - 1) {
+        index++;
+        updateSlider();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (index > 0) {
+        index--;
+        updateSlider();
+    }
+});
+
+
+let startX = 0;
+
+viewport.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+});
+
+viewport.addEventListener('touchend', e => {
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (diff > 50 && index < cards.length - 1) index++;
+    if (diff < -50 && index > 0) index--;
+
+    updateSlider();
+});
+
+
+
+
+

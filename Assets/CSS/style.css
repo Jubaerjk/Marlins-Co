@@ -274,10 +274,10 @@ ul li {
     align-items: center;
 }
 
-.floating-title {
+#hero-section .floating-title {
     font-size: clamp(1.2rem, 1rem + 0.5vw, 1.6rem);
     letter-spacing: 2px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     opacity: 0.9;
 }
 
@@ -318,7 +318,7 @@ ul li {
    Article Section Start
 ========================================================== */
 
-
+/* ===== Article Section ===== */
 #articles {
     padding: 6rem 0;
 }
@@ -329,23 +329,27 @@ ul li {
     gap: 2.4rem;
 }
 
-/* ===== Article Grid ===== */
+/* ===== Slider Viewport ===== */
 .article-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2.4rem;
+    position: relative;
+    overflow: hidden;
+    /* REQUIRED */
 }
 
-/* ===== Section Title ===== */
-.article-title {
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.8);
+/* ===== Slider Track (GRID stays) ===== */
+.article-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 32rem;
+    /* card width */
+    gap: 2rem;
+    transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 /* ===== Article Card ===== */
 .article-box {
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(39, 39, 39);
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
@@ -362,6 +366,8 @@ ul li {
 
 /* ===== Image ===== */
 .article-box img {
+    padding: 0.5rem;
+    border-radius: 0.6rem;
     width: 100%;
     height: 220px;
     object-fit: cover;
@@ -387,11 +393,10 @@ ul li {
 
 .article-date {
     font-size: clamp(0.9rem, 1vw, 1rem);
-    font-weight: 400;
     opacity: 0.6;
 }
 
-/* ===== Read More Button ===== */
+/* ===== Read More ===== */
 .article-read-more {
     margin-top: auto;
     background-color: #4b4b4b;
@@ -399,13 +404,40 @@ ul li {
     font-weight: 600;
     padding: 1rem 3.6rem;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .article-read-more:hover {
-    background-color: aqua;
+    background: aqua;
     color: #000;
 }
+
+/* ===== Slider Controls ===== */
+.article-slider-controls {
+    position: absolute;
+    bottom: -6rem;
+    right: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.article-slider-controls button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.article-slider-controls button:hover {
+    background: aqua;
+    color: #000;
+}
+
 
 
 
