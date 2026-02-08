@@ -783,7 +783,7 @@ ul li {
     background-repeat: no-repeat;
 
     /* sizing */
-    width: 30rem;
+    width: 32rem;
     aspect-ratio: 4 / 5;
     /* 1.25 height ratio */
     padding: 2.4rem;
@@ -839,6 +839,13 @@ ul li {
     font-weight: 500;
     font-size: 1.6rem;
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.fa-house,
+.fa-location-dot {
+    color: aqua;
+    font-size: 1.6rem;
 }
 
 .project-location {
@@ -875,6 +882,11 @@ ul li {
     padding: 0.8rem 0;
     border: 0.1rem solid var(--hover-color);
     border-radius: 0.8rem;
+}
+
+.project-btn:hover {
+    background-color: var(--hover-color);
+    color: #fff;
 }
 
 /* Project Section End */
