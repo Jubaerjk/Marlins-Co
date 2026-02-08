@@ -22,13 +22,13 @@ document.querySelectorAll(".navmenu a").forEach(link => {
 // ================================
 // SLIDER BUTTONS (placeholder)
 // ================================
-document.querySelector(".slider-btn-prev").addEventListener("click", () => {
-    console.log("Previous slide");
-});
+// document.querySelector(".slider-btn-prev").addEventListener("click", () => {
+//     console.log("Previous slide");
+// });
 
-document.querySelector(".slider-btn-next").addEventListener("click", () => {
-    console.log("Next slide");
-});
+// document.querySelector(".slider-btn-next").addEventListener("click", () => {
+//     console.log("Next slide");
+// });
 
 
 
@@ -92,6 +92,8 @@ viewport.addEventListener('touchend', e => {
 
 /* Recalculate on resize */
 window.addEventListener('resize', updateSlider);
+
+
 
 
 
