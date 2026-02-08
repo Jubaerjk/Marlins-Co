@@ -289,7 +289,7 @@ ul li {
 /* ================================
    SLIDER BUTTONS
 ================================ */
-.slider-controls {
+.dot-slider-controls {
     position: absolute;
     bottom: 5rem;
     right: 5rem;
@@ -297,20 +297,14 @@ ul li {
     gap: 1.5rem;
 }
 
-.slider-controls button {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+.dot-slider-controls button {
+    width: 10px;
+    height: 10px;
     border: none;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background-color: transparent;
+    color: aqua;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.slider-controls button:hover {
-    background: aqua;
-    color: #000;
 }
 
 
