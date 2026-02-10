@@ -911,13 +911,15 @@ ul li {
 
 .team-grid {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2.4rem;
 }
 
 #team .team-card {
     background-color: #252525;
     /* box-model */
-    width: 32rem;
+    width: 36rem;
     padding: 0.8rem;
     border-radius: 0.6rem;
 }

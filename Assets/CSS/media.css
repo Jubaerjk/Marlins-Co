@@ -23,6 +23,12 @@ Large Desktop Devices (1200px+)
 /* Header Notice bar & Navbar Media */
 /* ===================================================================== */
 
+@media (max-width: 480px) {
+  .container {
+    width: 98%;
+  }
+}
+
 @media (max-width: 768px) {
   #hero-section {
     height: 100svh;
