@@ -47,24 +47,6 @@ a {
 }
 
 
-h1 {
-    font-size: clamp(3.2rem, 5vw, 5.6rem);
-}
-
-h2 {
-    font-size: clamp(2.4rem, 3vw, 4rem);
-}
-
-h3 {
-    font-size: 2.4rem;
-}
-
-h4 {
-    font-size: 1.8rem;
-}
-
-
-
 /* ========================================================== 
    COMMON STYLES   
 ========================================================== */
@@ -104,18 +86,18 @@ h4 {
 }
 
 .middle-section {
-    background-color: #141414;
+    /* color */
+    background-color: #181818;
+    color: transparent;
+    -webkit-text-stroke: 0.1rem var(--light-color);
+
     /* box-model */
     padding: 5rem 0;
 
     /* font */
-    font-size: 5.2rem;
+    font-size: clamp(3.2rem, 5vw, 5.2rem);
     font-weight: 800;
     text-align: center;
-
-    /* color */
-    color: transparent;
-    -webkit-text-stroke: 0.1rem var(--light-color);
 }
 
 ul li {
@@ -320,9 +302,6 @@ ul li {
    Article Section Start
 ========================================================== */
 
-/* ===============================
-   ARTICLES SECTION
-================================ */
 #articles {
     padding: 6rem 0;
 }
