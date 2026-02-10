@@ -72,11 +72,9 @@ h4 {
 /* For Container */
 .container {
     /* box-model */
-    width: 100%;
-    height: 100%;
+    width: 96%;
     max-width: 136rem;
     margin: 0 auto;
-    padding: 0 1.2rem;
 }
 
 .section-title {
@@ -161,17 +159,10 @@ ul li {
 
 /* ********* Dark Overlay *********/
 #hero-section::after {
-    /* box-model */
     content: "";
-
-    /* position */
     position: absolute;
     inset: 0;
-
-    /* color */
     background: rgba(0, 0, 0, 0.55);
-
-    /* z-index */
     z-index: -1;
 }
 
@@ -183,10 +174,9 @@ ul li {
     font-size: clamp(1.6rem, 1rem + 0.5vw, 1.8rem);
 
     /* box-model */
-    width: 100%;
+    width: 96%;
     max-width: 136rem;
     margin: 0 auto;
-    padding: 0 2rem;
 
     /* position */
     position: absolute;

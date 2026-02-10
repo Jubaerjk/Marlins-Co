@@ -25,7 +25,7 @@ Large Desktop Devices (1200px+)
 
 @media (max-width: 768px) {
   #hero-section {
-    height: 90vh;
+    height: 100svh;
   }
 
   .btn-mobile-nav {
